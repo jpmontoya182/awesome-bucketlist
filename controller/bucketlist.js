@@ -1,17 +1,10 @@
-const express = require('express');
-const router = express.Router();
+'use strict'
+const BucketList = require('../models/list');
 
-// get
-router.get('/', (req, res)=> {
-    res.send('Get');
-});
-// post
-router.post('/', (req, res, next) =>{
-    res.send('Post');
-});
-// delete : id
-router.delete('/:id', (req, res, next) => {
-    res.send('Delete')
-});
+function getList(req, res){
+    return res.status(200).send({message : 'ok'})
+}
 
-module.exports = router;
+module.exports = {
+    getList
+};

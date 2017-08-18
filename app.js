@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res)=>{
     res.send('Invalid Page');
 })
-app.use('/bucketlist', bucketlist);
+// app.use('/bucketlist', bucketlist);
 // listen to port 3000
 app.listen(port, ()=>{
     console.warn(`Starting the server at port ${port}`);
